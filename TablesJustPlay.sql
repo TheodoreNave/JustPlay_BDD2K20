@@ -43,11 +43,11 @@ CREATE TABLE Videos(
    Description TEXT,
    date_de_sortie DATE,
    date_ajout DATETIME,
-   id_1 INT NOT NULL,
-   id_2 INT NOT NULL,
+   id_Pays INT NOT NULL,
+   id_Categories INT NOT NULL,
    PRIMARY KEY(id),
-   FOREIGN KEY(id_1) REFERENCES Pays(id),
-   FOREIGN KEY(id_2) REFERENCES Categories(id)
+   FOREIGN KEY(id_Pays) REFERENCES Pays(id),
+   FOREIGN KEY(id_Categories) REFERENCES Categories(id)
 );
 
 CREATE TABLE Adresse(
@@ -55,9 +55,9 @@ CREATE TABLE Adresse(
    Ville VARCHAR(50),
    Code_Postal VARCHAR(50),
    Lieu_de_residence VARCHAR(50),
-   id_1 INT NOT NULL,
+   id_Pays INT NOT NULL,
    PRIMARY KEY(id),
-   FOREIGN KEY(id_1) REFERENCES Pays(id)
+   FOREIGN KEY(id_Pays) REFERENCES Pays(id)
 );
 
 CREATE TABLE Utilisateurs(
@@ -68,57 +68,57 @@ CREATE TABLE Utilisateurs(
    Date_de_naissance DATE,
    Password VARCHAR(50),
    E_Mail VARCHAR(50),
-   id_1 INT,
-   id_2 INT,
+   id_Adresse INT,
+   id_Abonnement INT,
    PRIMARY KEY(id),
-   FOREIGN KEY(id_1) REFERENCES Adresse(id),
-   FOREIGN KEY(id_2) REFERENCES Abonnement(id)
+   FOREIGN KEY(id_Adresse) REFERENCES Adresse(id),
+   FOREIGN KEY(id_Abonnement) REFERENCES Abonnement(id)
 );
 
 CREATE TABLE Profils(
    id INT,
    avatar_url INT,
-   id_1 INT NOT NULL,
+   id_Utilisateurs INT NOT NULL,
    PRIMARY KEY(id),
-   FOREIGN KEY(id_1) REFERENCES Utilisateurs(id)
+   FOREIGN KEY(id_Utilisateurs) REFERENCES Utilisateurs(id)
 );
 
 CREATE TABLE Visible(
-   id INT,
-   id_1 INT,
-   PRIMARY KEY(id, id_1),
-   FOREIGN KEY(id) REFERENCES Videos(id),
-   FOREIGN KEY(id_1) REFERENCES Langues(id)
+   id_Videos INT,
+   id_Langues INT,
+   PRIMARY KEY(id_Videos, id_Langues),
+   FOREIGN KEY(id_Videos) REFERENCES Videos(id),
+   FOREIGN KEY(id_Langues) REFERENCES Langues(id)
 );
 
 CREATE TABLE Joue(
-   id INT,
-   id_1 INT,
-   PRIMARY KEY(id, id_1),
-   FOREIGN KEY(id) REFERENCES Videos(id),
-   FOREIGN KEY(id_1) REFERENCES Casting(id)
+   id_Videos INT,
+   id_Casting INT,
+   PRIMARY KEY(id_Videos, id_Casting),
+   FOREIGN KEY(id_Videos) REFERENCES Videos(id),
+   FOREIGN KEY(id_Casting) REFERENCES Casting(id)
 );
 
 CREATE TABLE détients(
-   id INT,
-   id_1 INT,
-   PRIMARY KEY(id, id_1),
-   FOREIGN KEY(id) REFERENCES Videos(id),
-   FOREIGN KEY(id_1) REFERENCES Genre(id)
+   id_Videos INT,
+   id_Genre INT,
+   PRIMARY KEY(id_Videos, id_Genre),
+   FOREIGN KEY(id_Videos) REFERENCES Videos(id),
+   FOREIGN KEY(id_Genre) REFERENCES Genre(id)
 );
 
 CREATE TABLE réalise(
-   id INT,
-   id_1 INT,
-   PRIMARY KEY(id, id_1),
-   FOREIGN KEY(id) REFERENCES Videos(id),
-   FOREIGN KEY(id_1) REFERENCES Casting(id)
+   id_Videos INT,
+   id_Casting INT,
+   PRIMARY KEY(id_Videos, id_Casting),
+   FOREIGN KEY(id_Videos) REFERENCES Videos(id),
+   FOREIGN KEY(id_Casting) REFERENCES Casting(id)
 );
 
 CREATE TABLE Accesible(
-   id INT,
-   id_1 INT,
-   PRIMARY KEY(id, id_1),
-   FOREIGN KEY(id) REFERENCES Videos(id),
-   FOREIGN KEY(id_1) REFERENCES Pays(id)
+   id_Videos INT,
+   id_Pays INT,
+   PRIMARY KEY(id_Videos, id_Pays),
+   FOREIGN KEY(id_Videos) REFERENCES Videos(id),
+   FOREIGN KEY(id_Pays) REFERENCES Pays(id)
 );
