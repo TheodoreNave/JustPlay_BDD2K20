@@ -63,7 +63,6 @@ CREATE TABLE Adresse(
 CREATE TABLE Utilisateurs(
    id INT,
    Nom VARCHAR(50),
-   abonnement INT,
    Prenom VARCHAR(50),
    Date_de_naissance DATE,
    Password VARCHAR(50),
