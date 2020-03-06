@@ -83,7 +83,7 @@ CREATE TABLE Profils(
    FOREIGN KEY(id_1) REFERENCES Utilisateurs(id)
 );
 
-CREATE TABLE Disponiblle(
+CREATE TABLE Visible(
    id INT,
    id_1 INT,
    PRIMARY KEY(id, id_1),
@@ -115,7 +115,7 @@ CREATE TABLE réalise(
    FOREIGN KEY(id_1) REFERENCES Casting(id)
 );
 
-CREATE TABLE Disponible(
+CREATE TABLE Accesible(
    id INT,
    id_1 INT,
    PRIMARY KEY(id, id_1),
