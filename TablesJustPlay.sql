@@ -1,30 +1,30 @@
 CREATE TABLE Categories(
-   id_categorie INT AUTO_INCREMENT,
+   id_categorie INT IDENTITY(1,1),
    Nom VARCHAR(50),
    PRIMARY KEY(id_categorie)
 );
 
 CREATE TABLE Langues(
-   id_langue INT AUTO_INCREMENT,
+   id_langue INT IDENTITY(1,1),
    Nom VARCHAR(50),
    PRIMARY KEY(id_langue)
 );
 
 CREATE TABLE Casting(
-   id_casting INT AUTO_INCREMENT,
+   id_casting INT IDENTITY(1,1),
    Nom VARCHAR(50),
    Prenom VARCHAR(50),
    PRIMARY KEY(id_casting)
 );
 
 CREATE TABLE Genre(
-   id_genre INT AUTO_INCREMENT,
+   id_genre INT IDENTITY(1,1),
    Nom VARCHAR(50),
    PRIMARY KEY(id_genre)
 );
 
 CREATE TABLE Abonnement(
-   id_abonnement INT AUTO_INCREMENT,
+   id_abonnement INT IDENTITY(1,1),
    Nom VARCHAR(50),
    Nombre_Profils_Max INT,
    Prix INT,
@@ -32,13 +32,13 @@ CREATE TABLE Abonnement(
 );
 
 CREATE TABLE Pays(
-   id_Pays INT AUTO_INCREMENT,
+   id_Pays INT IDENTITY(1,1),
    Nom VARCHAR(50),
    PRIMARY KEY(id_Pays)
 );
 
 CREATE TABLE Ville(
-   id_ville INT AUTO_INCREMENT,
+   id_ville INT IDENTITY(1,1),
    Nom VARCHAR(50),
    Code_postal INT,
    PRIMARY KEY(id_ville)
@@ -58,7 +58,7 @@ CREATE TABLE Videos(
 );
 
 CREATE TABLE Adresse(
-   id_adresse INT AUTO_INCREMENT,
+   id_adresse INT IDENTITY(1,1),
    Lieu_de_residence VARCHAR(50),
    id_ville INT,
    PRIMARY KEY(id_adresse),
@@ -66,7 +66,7 @@ CREATE TABLE Adresse(
 );
 
 CREATE TABLE Utilisateurs(
-   id_utilisateur INT AUTO_INCREMENT,
+   id_utilisateur INT IDENTITY(1,1),
    Nom VARCHAR(50),
    abonnement INT,
    Prenom VARCHAR(50),
@@ -79,7 +79,7 @@ CREATE TABLE Utilisateurs(
 );
 
 CREATE TABLE Profils(
-   id_profil INT AUTO_INCREMENT,
+   id_profil INT IDENTITY(1,1),
    avatar_url INT,
    id_utilisateur INT NOT NULL,
    PRIMARY KEY(id_profil),
@@ -87,7 +87,7 @@ CREATE TABLE Profils(
 );
 
 CREATE TABLE Paiement(
-   id_paiement INT AUTO_INCREMENT,
+   id_paiement INT IDENTITY(1,1),
    statut_paiement VARCHAR(50),
    id_abonnement INT NOT NULL,
    id_utilisateur INT NOT NULL,
