@@ -10,3 +10,9 @@ INSERT INTO Genre VALUES (9,'Aventure')
 INSERT INTO Genre VALUES (10,'Péplum')
 INSERT INTO Genre VALUES (11,'science-fiction')
 INSERT INTO Genre VALUES (12,'érotique')
+
+
+INSERT INTO Categories VALUES (1,'Documentaires')
+INSERT INTO Categories VALUES (2,'Films')
+INSERT INTO Categories VALUES (3,'Séries')
+INSERT INTO Categories VALUES (4,'Divertissements')
