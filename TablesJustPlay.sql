@@ -5,9 +5,9 @@ CREATE TABLE Categories(
 );
 
 CREATE TABLE Langues(
-   id_genre INT,
+   id_langue INT,
    Nom VARCHAR(50),
-   PRIMARY KEY(id_genre)
+   PRIMARY KEY(id_langue)
 );
 
 CREATE TABLE Casting(
@@ -98,10 +98,10 @@ CREATE TABLE Paiement(
 
 CREATE TABLE Visible(
    video_url VARCHAR(50),
-   id_genre INT,
-   PRIMARY KEY(video_url, id_genre),
+   id_langue INT,
+   PRIMARY KEY(video_url, id_langue),
    FOREIGN KEY(video_url) REFERENCES Videos(video_url),
-   FOREIGN KEY(id_genre) REFERENCES Langues(id_genre)
+   FOREIGN KEY(id_langue) REFERENCES Langues(id_langue)
 );
 
 CREATE TABLE Joue(
