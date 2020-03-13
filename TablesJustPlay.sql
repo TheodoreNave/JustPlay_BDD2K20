@@ -27,7 +27,7 @@ CREATE TABLE Abonnement(
    id_abonnement INT,
    Nom VARCHAR(50),
    Nombre_ecran INT,
-   Prix INT,
+   Prix DECIMAL(15,2),
    PRIMARY KEY(id_abonnement)
 );
 
