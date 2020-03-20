@@ -5,3 +5,10 @@ INSERT INTO Utilisateurs (Nom, Prenom, Date_de_naissance, Password, E_Mail)
  ('Sacha', 'Baret', '1999-12-05', 'ABCDEF', 'sacha@justplay.com'),
  ('Mathieu', 'Flaud', '1999-12-03', 'ABCDEF', 'mathieu@justplay.com'),
  ('Dhia', 'Aloui', '1999-12-04', 'ABCDEF', 'dhia@justplay.com');
+ 
+ /* Modification du contenue de la table  */
+
+UPDATE Utilisateurs
+SET Nom = 'Navéer',
+    Prenom = 'Théo',
+WHERE id = 1
