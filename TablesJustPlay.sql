@@ -127,7 +127,7 @@ CREATE TABLE réalise(
    FOREIGN KEY(id_casting) REFERENCES Casting(id_casting)
 );
 
-CREATE TABLE Accesible(
+CREATE TABLE Accessible(
    video_url VARCHAR(50),
    id_Pays INT,
    PRIMARY KEY(video_url, id_Pays),

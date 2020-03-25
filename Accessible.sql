@@ -1,5 +1,5 @@
-SELECT * FROM Accesible
-INSERT INTO Accesible (video_url, id_Pays) VALUES
+SELECT * FROM Accessible
+INSERT INTO Accessible (video_url, id_Pays) VALUES
 ('1', '1'),
 ('2', '2'),
 ('3', '3'),
