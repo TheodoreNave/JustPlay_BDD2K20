@@ -1,29 +1,32 @@
-INSERT INTO Genre VALUES ('Comedie')
-INSERT INTO Genre VALUES ('Drame')
-INSERT INTO Genre VALUES ('Romance')
-INSERT INTO Genre VALUES ('Historique')
-INSERT INTO Genre VALUES ('Western')
-INSERT INTO Genre VALUES ('Horreur')
-INSERT INTO Genre VALUES ('Fantaisie')
-INSERT INTO Genre VALUES ('Thriller')
-INSERT INTO Genre VALUES ('Aventure')
-INSERT INTO Genre VALUES ('Péplum')
-INSERT INTO Genre VALUES ('science-fiction')
-INSERT INTO Genre VALUES ('érotique')
+INSERT INTO Genre (Nom) VALUES 
+  ('Comedie'),
+  ('Drame'),
+  ('Romance'),
+  ('Historique'),
+  ('Western'),
+  ('Horreur'),
+  ('Fantaisie'),
+  ('Thriller'),
+  ('Aventure'),
+  ('Péplum'),
+  ('science-fiction'),
+  ('érotique');
 
 
-INSERT INTO Categories VALUES ('Documentaires')
-INSERT INTO Categories VALUES ('Films')
-INSERT INTO Categories VALUES ('Séries')
-INSERT INTO Categories VALUES ('Divertissements')
+INSERT INTO Categories (Nom) VALUES 
+  ('Documentaires'),
+  ('Films'),
+  ('Séries'),
+  ('Divertissements');
 
 
-INSERT INTO Langues VALUES ('Francais')
-INSERT INTO Langues VALUES ('Anglais')
-INSERT INTO Langues VALUES ('Allemand')
-INSERT INTO Langues VALUES ('Japonais')
-INSERT INTO Langues VALUES ('Espagnol')
-INSERT INTO Langues VALUES ('Italien')
-INSERT INTO Langues VALUES ('Chinois')
-INSERT INTO Langues VALUES ('Russe')
-INSERT INTO Langues Values ('Naavi')
+INSERT INTO Langues (Nom) VALUES 
+  ('Francais'),
+  ('Anglais'),
+  ('Allemand'),
+  ('Japonais'),
+  ('Espagnol'),
+  ('Italien'),
+  ('Chinois'),
+  ('Russe'),
+  ('Naavi');
