@@ -1,4 +1,4 @@
-INSERT INTO détiens (video_url,id_genre) VALUES 
+INSERT INTO détient (video_url,id_genre) VALUES 
     ('1',1),
     ('1',2),
     ('1',4),
